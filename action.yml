@@ -137,6 +137,7 @@ runs:
     - ${{ inputs.var_file }}
     - ${{ inputs.repo_root_for_plan_enrichment }}
     - "--user ${{ inputs.container_user }}"
+    - "-v ~/.gitconfig:/etc/gitconfig:ro"
   env:
     API_KEY_VARIABLE: ${{ inputs.api-key }}
     GITHUB_PAT: ${{ inputs.github_pat }}
